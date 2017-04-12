@@ -1,0 +1,52 @@
+doctype html
+html
+    head
+        link(rel='stylesheet', href='../css/styles.min.css')
+        script(src = '/socket.io/socket.io.js')
+    body
+        header
+            h1 Microsoft Cognitive Services: Emotion API
+        #Cam.container
+          b Webcam Preview...
+          .footer
+            #my_camera
+            form
+              // input#clicker(type='button', value='Analyze', onclick='take_snapshot()')
+              input#clicker(type='button', value='Analyze')
+        #Prev.container
+          .footer
+            b Snap Preview...
+            #results
+        #Saved.container
+          #chart.chart
+            p
+              | Anger : 
+              span#anger
+            p
+              | Contempt : 
+              span#contempt
+            p
+              | Disgust : 
+              span#disgust
+            p
+              | Fear : 
+              span#fear
+            p
+              | Happiness : 
+              span#happiness
+            p
+              | Neutral : 
+              span#neutral
+            p
+              | Sadness : 
+              span#sadness
+            p
+              | Surprise : 
+              span#surprise
+          .footer
+            b Task : 
+            span#loading
+        footer
+            p Running Express, Sockets, Gulp, Pug and Azure Cognitive Services Emotion API.
+        script(src = '../js/libs/libs.min.js')
+        script(src = '../js/bundle.min.js')
